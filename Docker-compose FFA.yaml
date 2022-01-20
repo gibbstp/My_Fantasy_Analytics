@@ -1,0 +1,10 @@
+version: "3.6"
+
+services:
+  fantasyfootballanalytics:
+    container_name: ffa
+    build:
+      context: ffa/.
+    volumes:
+      - ./db:/home/app/db
+      - ./app/r:/home/app/app

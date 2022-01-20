@@ -1,0 +1,10 @@
+version: "3.6"
+
+services:
+  fantasyfootballanalytics:
+    container_name: web
+    build:
+      context: web/.
+    volumes:
+      - ./db:/home/app/db
+      - ./web:/home/app/web
