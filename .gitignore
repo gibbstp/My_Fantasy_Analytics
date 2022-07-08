@@ -114,4 +114,7 @@ dmypy.json
 .pyre/
 
 #ffa local package
-DEV/ffa/ffanalytics/
+ffa/ffanalytics/
+
+#Visual Stuio Code settings
+.version

@@ -6,5 +6,5 @@ services:
     build:
       context: ffa/.
     volumes:
-      - ./db:/home/app/db
-      - ./app/r:/home/app/app
+      - ./../db:/home/app/db
+      - ./../app/r:/home/app/app

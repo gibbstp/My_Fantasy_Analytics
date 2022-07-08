@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mariadb:latest
+    container_name: db
+    restart: unless-stopped
+    environment:
+      MARIADB_USER: adminer
+      MARIADB_PASSWORD: adminer
+      MARIADB_ROOT_USER: root
+      MARIADB_ROOT_PASSWORD: password
+    volumes:
+      - ./db:/db    
+
+  adminer:
+    image: adminer:latest
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
+  dev:
+    container_name: dev
+    build:
+      context: ./app/.
+    volumes:
+      - .:/home
+    tty: true
+
+
