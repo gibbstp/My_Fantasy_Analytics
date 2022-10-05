@@ -1,5 +1,5 @@
 FROM rocker/tidyverse:latest
 
-WORKDIR /home/app
+WORKDIR /home/app/ffa
 
 RUN Rscript ffa.R

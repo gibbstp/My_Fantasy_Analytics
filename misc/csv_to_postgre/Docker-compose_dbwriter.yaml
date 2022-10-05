@@ -1,7 +1,7 @@
 version: "3.6"
 
 services:
-  mfa_app:
+  mfa_dbwriter:
     container_name: mfa_dbwriter
     build:
       context: .
@@ -11,14 +11,12 @@ services:
     stdin_open: true
 
   db:
-    image: mariadb:latest
+    image: postgres:latest
     container_name: db
     restart: unless-stopped
     environment:
-      MARIADB_USER: adminer
-      MARIADB_PASSWORD: adminer
-      MARIADB_ROOT_USER: root
-      MARIADB_ROOT_PASSWORD: password
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
     volumes:
       - ./../../db:/home/db
 
