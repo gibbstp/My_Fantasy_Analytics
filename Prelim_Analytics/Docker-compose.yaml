@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  python:
+    image: python:3.11.3-bullseye
+    volumes:
+      - .:/home
+    tty: true
+    stdin_open: true
